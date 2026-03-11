@@ -1,0 +1,58 @@
+<section class="page fade-in">
+  <header class="page-header">
+    <div>
+      <p class="caption">Pantalla 3</p>
+      <h2>Configuracion</h2>
+    </div>
+
+    <button class="btn btn-secondary" type="button">Restaurar defaults</button>
+  </header>
+
+  <section class="settings-grid">
+    <article class="surface settings-main">
+      <div class="field-grid">
+        <label class="field">
+          <span class="caption">Zona horaria</span>
+          <input class="input-control" type="text" placeholder="America/Bogota" />
+        </label>
+
+        <label class="field">
+          <span class="caption">Formato de hora</span>
+          <input class="input-control" type="text" placeholder="24h" />
+        </label>
+      </div>
+
+      <div class="toggle-list">
+        <label *ngFor="let option of options" class="toggle-row card-hover">
+          <span class="toggle-text">
+            <strong>{{ option.label }}</strong>
+            <small>{{ option.detail }}</small>
+          </span>
+          <span class="toggle">
+            <input type="checkbox" [checked]="option.enabled" />
+            <span class="toggle-track"></span>
+          </span>
+        </label>
+      </div>
+    </article>
+
+    <article class="surface settings-preview card-hover">
+      <p class="caption">Vista previa</p>
+      <h3>Estados visuales</h3>
+
+      <div class="preview-stack">
+        <button class="btn btn-primary" type="button">Boton primario</button>
+        <button class="btn btn-secondary" type="button">Boton secundario</button>
+        <button class="btn" type="button" disabled>Deshabilitado</button>
+      </div>
+
+      <div class="legend-row">
+        <span class="priority-badge high">Urgente</span>
+        <span class="priority-badge">Normal</span>
+        <span class="priority-badge low">Baja</span>
+      </div>
+
+      <p class="muted">Este panel sirve para validar coherencia del sistema de estilos durante el prototipado.</p>
+    </article>
+  </section>
+</section>

@@ -1,0 +1,57 @@
+<section class="page fade-in">
+  <header class="page-header">
+    <div>
+      <p class="caption">Pantalla 2</p>
+      <h2>Gestion de alarmas</h2>
+    </div>
+
+    <div class="actions-group">
+      <button class="btn btn-secondary" type="button">Duplicar</button>
+      <button class="btn btn-primary" type="button">Crear alarma</button>
+    </div>
+  </header>
+
+  <section class="filters-row">
+    <button *ngFor="let filter of filters" class="chip" type="button">{{ filter }}</button>
+  </section>
+
+  <section class="management-grid">
+    <article class="surface table-panel">
+      <header class="table-head">
+        <span>Hora</span>
+        <span>Detalle</span>
+        <span>Prioridad</span>
+        <span>Estado</span>
+      </header>
+
+      <div class="table-list">
+        <app-alarm-table-row
+          *ngFor="let row of rows"
+          [time]="row.time"
+          [title]="row.title"
+          [context]="row.context"
+          [priority]="row.priority"
+          [state]="row.state"
+        ></app-alarm-table-row>
+      </div>
+    </article>
+
+    <article class="surface side-panel card-hover">
+      <p class="caption">Resumen visual</p>
+      <h3>Distribucion de prioridad</h3>
+      <div class="summary-row">
+        <span class="priority-badge high">Alta</span>
+        <strong>2</strong>
+      </div>
+      <div class="summary-row">
+        <span class="priority-badge">Media</span>
+        <strong>1</strong>
+      </div>
+      <div class="summary-row">
+        <span class="priority-badge low">Baja</span>
+        <strong>1</strong>
+      </div>
+      <p class="muted">Solo maquetacion visual. Sin persistencia ni logica de negocio.</p>
+    </article>
+  </section>
+</section>

@@ -1,0 +1,14 @@
+<div class="table-row card-hover">
+  <span class="row-time">{{ time }}</span>
+
+  <div class="row-main">
+    <p class="row-title">{{ title }}</p>
+    <p class="row-context">{{ context }}</p>
+  </div>
+
+  <span class="priority-badge" [class.high]="priority === 'high'" [class.low]="priority === 'low'">
+    {{ priorityLabel }}
+  </span>
+
+  <span class="row-state">{{ state }}</span>
+</div>

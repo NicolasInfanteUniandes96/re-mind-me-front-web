@@ -1,0 +1,51 @@
+<div class="app-shell fade-in">
+  <aside class="sidebar">
+    <div class="brand-block">
+      <p class="caption">Prototipo academico</p>
+      <h1 class="brand-title">Re-Mind Me</h1>
+    </div>
+
+    <nav class="side-nav" aria-label="Navegacion principal">
+      <a
+        class="nav-link"
+        routerLink="/dashboard"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Dashboard
+      </a>
+      <a
+        class="nav-link"
+        routerLink="/alarms"
+        routerLinkActive="active"
+      >
+        Gestion de alarmas
+      </a>
+      <a
+        class="nav-link"
+        routerLink="/settings"
+        routerLinkActive="active"
+      >
+        Configuracion
+      </a>
+    </nav>
+  </aside>
+
+  <section class="workspace">
+    <header class="topbar">
+      <div>
+        <p class="caption">UI Development - High Fidelity Prototype</p>
+        <p class="topbar-title">Alarm context, urgency and intention</p>
+      </div>
+
+      <div class="topbar-actions">
+        <span class="chip">Modo oscuro</span>
+        <span class="chip">Web prototype</span>
+      </div>
+    </header>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </section>
+</div>
