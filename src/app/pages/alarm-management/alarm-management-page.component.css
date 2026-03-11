@@ -1,0 +1,21 @@
+.page {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.page-header h2 {
+  margin: 0.35rem 0 0;
+  font-size: var(--font-size-h2);
+}
+
+.panel {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.panel-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  margin-bottom: var(--space-2);
+}
