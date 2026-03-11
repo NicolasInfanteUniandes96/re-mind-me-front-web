@@ -1,59 +1,53 @@
-# RemindmeApp
+# Re-Mind Me (Web)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+Prototipo academico de alta fidelidad orientado a UX/UI, implementado como aplicacion web.
 
-## Development server
+## Motivo del proyecto
+Los usuarios utilizan la aplicacion de alarmas como una herramienta de
+recordatorio y organizacion, pero cuando la alarma suena no recuerdan el
+contexto ni la accion asociada, lo que genera confusion, frustracion y perdida
+de control sobre su tiempo.
+- que se debe hacer,
+- por que se creo la alarma,
+- que tan urgente es.
 
-To start a local development server, run:
+Re-Mind Me propone una experiencia de alarma con mas contexto, urgencia e intencion visual.
 
-```bash
-ng serve
-```
+## Alcance actual
+Este proyecto esta hecho como prototipo no funcional:
+- Dashboard de alarmas
+- Gestion de alarmas
+- Configuracion
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Fuera de alcance
+No incluye:
+- backend
+- base de datos
+- notificaciones reales
+- persistencia
 
-## Code scaffolding
+## Stack usado
+- Angular 21
+- TypeScript 5
+- HTML + CSS
+- Angular Router
+- npm
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Requisitos
+- Node.js (LTS recomendado)
+- npm
 
-```bash
-ng generate component component-name
-```
+## Como levantar la app
+1. Abrir una terminal en la carpeta del proyecto.
+2. Instalar dependencias:
+   - `npm install`
+3. Iniciar el servidor de desarrollo:
+   - `npm start`
+4. Abrir en navegador:
+   - `http://localhost:4200`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Build de produccion
+1. Generar build:
+   - `npm run build`
+2. Salida:
+   - `dist/`

@@ -1,20 +1,54 @@
 <section class="page fade-in">
   <header class="page-header">
-    <p class="caption">Pantalla 1</p>
-    <h2>Dashboard</h2>
+    <div>
+      <p class="caption">Pantalla 1</p>
+      <h2>Dashboard</h2>
+    </div>
+
+    <button class="btn btn-primary" type="button">Nueva alarma</button>
   </header>
 
-  <div class="placeholder-grid">
-    <article class="surface alarm-card">
-      <p class="caption">HORA DIGITAL</p>
-      <p class="display-time">07:30</p>
-      <p class="muted">Vista inicial de urgencia y contexto.</p>
+  <section class="hero-grid">
+    <article class="surface hero-time card-hover">
+      <p class="caption">Hora actual</p>
+      <p class="display-time">{{ currentTime }}</p>
+      <p class="muted">{{ currentDate }}</p>
     </article>
 
-    <article class="surface alarm-card">
-      <p class="caption">PROXIMA ALARMA</p>
-      <p class="alarm-title">Daily Standup</p>
-      <span class="badge">Prioridad media</span>
+    <article class="surface hero-context card-hover">
+      <p class="caption">Foco del dia</p>
+      <h3>Claridad + control</h3>
+      <p class="muted">Las alarmas ahora expresan que hacer, por que hacerlo y con que urgencia.</p>
+      <div class="inline-tags">
+        <span class="priority-badge high">Urgente</span>
+        <span class="priority-badge">Planificada</span>
+      </div>
     </article>
-  </div>
+  </section>
+
+  <section class="metrics-grid">
+    <article *ngFor="let metric of metrics" class="surface metric-card card-hover">
+      <p class="caption">{{ metric.label }}</p>
+      <p class="metric-value">{{ metric.value }}</p>
+      <p class="muted">{{ metric.note }}</p>
+    </article>
+  </section>
+
+  <section class="section-stack">
+    <div class="section-head">
+      <p class="caption">Proximas alarmas</p>
+      <p class="muted">Vista de prioridad y contexto inmediato</p>
+    </div>
+
+    <div class="alarm-grid">
+      <app-alarm-card
+        *ngFor="let alarm of focusAlarms"
+        [title]="alarm.title"
+        [time]="alarm.time"
+        [intention]="alarm.intention"
+        [context]="alarm.context"
+        [priority]="alarm.priority"
+      ></app-alarm-card>
+    </div>
+  </section>
 </section>

@@ -3,14 +3,33 @@
   gap: var(--space-5);
 }
 
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-4);
+}
+
 .page-header h2 {
-  margin: 0.35rem 0 0;
+  margin-top: 0.3rem;
   font-size: var(--font-size-h2);
 }
 
-.settings-stack {
+.settings-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1.3fr 0.8fr;
+}
+
+.settings-main {
   display: grid;
   gap: var(--space-5);
+}
+
+.field-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .field {
@@ -18,9 +37,67 @@
   gap: var(--space-2);
 }
 
+.toggle-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
 .toggle-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  background: rgb(10 10 15 / 0.45);
+  padding: var(--space-3) var(--space-4);
+}
+
+.toggle-text {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.toggle-text strong {
+  font-size: 0.95rem;
+}
+
+.toggle-text small {
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}
+
+.settings-preview {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.settings-preview h3 {
+  margin: 0;
+}
+
+.preview-stack {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.legend-row {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+  .settings-grid,
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .page-header {
+    flex-direction: column;
+    align-items: start;
+  }
 }
